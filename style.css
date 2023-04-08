@@ -373,9 +373,17 @@ footer p {
     a.active {
         border: transparent;
 
+    }
 }
 
-@media screen and (max-width: 750px) {
+.scroll {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all .5s;
+}
 
-    }
+.reveal {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s;
 }
