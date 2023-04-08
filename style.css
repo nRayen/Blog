@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+*{box-sizing: border-box;}
+
+
+body, html {margin: 0;}
+body {
+    font-size: 16px;
+    font-family: Montserrat ,sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 23px;
+    background-color: #FBFBFB;
+}
+
+.topbar {
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 31px;
+    padding-left: 40px;
+    z-index: 3;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, .3);
+    height: auto;
+
+    
+}
+
+.navbar {
+    float: left; 
+ }
+
+ .navbar a {
+    color: #9F9F9F;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    margin: 0 53px;
+    font-weight: 600;
+    transition: transform .25s, color .25s;
+    left: 20px;
+ }
+
+ .navbar a:hover {
+    color: black;
+    transform: scale(1.2);
+    display: inline-block;
+ }
+
+ a.active{
+    color: black;
+    border-bottom: black solid;
+    padding-bottom: 3px;
+
+ }
+
+
+ .socials {
+    float: right;
+}
+
+.socials img {
+    margin: 0 15px;
+    opacity: 0.4;
+    transition: transform .25s, opacity .25s;
+    }
+
+.socials img:hover {
+    opacity: 1;
+    transform: scale(1.4);
+    
+}
+
+.banner {
+    height: 427px;
+    background: no-repeat center center / cover url(img/background.jpg);
+    filter:brightness(110%);
+}
+
+
+.content {
+    float: left;
+    width: 78%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 2;
+}
+
+.article-box {
+    display: block;
+    margin : 45px 100px 0 100px;
+    height: auto;
+
+}
+
+.article {
+    height: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+article img {
+    float: left;
+    margin-right: 26px;
+    border-radius: 10%;
+    padding: 0 10px 10px 10px;
+    transition: transform .5s;
+
+}
+article img:hover {
+    transform: scale(1.05);
+    border-radius: 10%;
+}
+
+.date {
+    font-size: 17px;
+    line-height: 23px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 7.6px;
+}
+
+.article-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-right: 0;
+    font-size: 36px;
+    line-height: 41px;
+    font-weight: 700;
+    font-family: Cardo, serif;
+    color: black;
+    width: auto;
+}
+.article-title:hover {
+    text-decoration: underline 3px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+.article-desc {
+    display: block;
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    color:  rgba(0, 0, 0, 0.87);
+    min-height: 120px;
+    margin-left: 354px;
+}
+
+.sidebar {
+    position: relative;
+    z-index: 1;
+    float: right;
+    width: 22%;
+    background-color: #FBFBFB;
+    overflow: hidden;
+    
+}
+
+.sidebar h3 { 
+    color: black;
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    margin-left: 40px;
+}
+
+.sidebar a {
+    color: #9F9F9F;
+    font-size: 17px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: black;
+}
+
+.sidebar li {
+    margin-bottom: 17px;
+}
+
+.sidebar ul {
+    margin-top: 0;
+    list-style: none;
+    margin-bottom: 43px;
+}
+
+.sidebar hr {
+    width: 80%;
+    height: 1px;
+    color: #c4c4c4;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    bottom: 0;
+    margin-top: 0;
+    padding: 5px 5px 15px 5px;
+    width: 100%;
+
+
+    font-size: 20px;
+    background: #9F9F9F;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+  /*SCROLLBAR*/
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lightgray;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #a19e9e;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: gray;}
+
+    .sidebar a::after{
+        content: attr(data-count);
+        float: right;
+        width: 25px;
+        height: 25px;
+        background-color: grey;
+        border-radius: 8px;
+        color: white;
+        text-align: center;
+        margin-right: 10px;
+        display: inline;
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: bold;
+
+    }
+
+    .sep-article {
+        margin: 0 12.5%;
+    }
+
+@media screen and (max-width: 1200px) {
+    .content {
+        width: 100%;
+    }
+
+    .article-box {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .sidebar {
+        float: none;
+        width: 100%;
+    }
+
+    .navbar a {
+        margin: 0 35px;    
+    }
+
+    .topbar {
+        padding-left: 21px;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 17px;
+      }
+      
+
+}
+    
+@media screen and (max-width: 840px) {
+    .article img {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .article-box {
+        display: block;
+        margin:  0;
+        padding: 30px;
+    }
+
+    .article:first-child {
+        margin-top: 0;
+    }
+
+    .article-title {
+        float: left;
+        position: relative;
+        width: auto;
+        margin-top: 20px;
+        
+    }
+
+    .article:last-child {
+        margin-bottom: 0;
+    }
+
+    .date {
+        float: right;
+        position: relative;
+        line-height: 41px;
+        margin-top: 20px;
+        
+    
+    }
+
+    .article-desc {
+        display: block;
+        margin: 0;
+        position:static;
+        clear: both;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .navbar , .socials{
+        float: none;
+        display: inline-block;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .topbar a {
+        margin: 0 20px;
+        display: inline-block;
+    }
+
+    .topbar {
+        display: inline-block;
+        text-align: center;
+        line-height: 15px;
+    }
+
+
+    .topbar .socials {
+        margin-left: 20px;
+    }
+
+    .topbar img {
+        margin: 0;
+    }
+
+    .topbar{
+        padding-bottom: 20px;
+        position: absolute;
+    }
+
+    a.active {
+        border: transparent;
+
+}
+
+@media screen and (max-width: 750px) {
+
+    }
+}
