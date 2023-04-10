@@ -14,3 +14,5 @@ window.addEventListener('DOMContentLoaded', () => {
         observer.observe(item)
     }
 })
+
+// https://jsonplaceholder.typicode.com/comments?_limit=10?&_page=2
