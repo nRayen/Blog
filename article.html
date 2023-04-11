@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Le Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="article.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/article.css">
     <script src="https://kit.fontawesome.com/b7936fa61f.js" crossorigin="anonymous"></script>
-    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core" defer></script>
+    <script src="scripts/comments.js"></script>
+    <script src="scripts/spinner.js" type="module"></script>
 </head>
 
 <body>
@@ -18,46 +20,46 @@
             <a href="about.html">A propos</a>
             <a href="contact.html">Contact</a>
         </nav>
-
+        
         <div class="socials">
             <a href="#"><img src="img/fb.png" alt="fb"></a>
             <a href="#"><img src="img/twitter.png" alt="twitter"></a>
         </div>
     </header>
-
+    
     <div class="banner"></div>
-
+    
     <main class="page">
         <section class="content">
             <div class="article">
-
+                
                 <article>
                     <img src="img/img-article.jpg" alt="Image article">
                     <h2 class="article-title">Le métier de freelance</h2>
                     <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores non quidem adipisci aliquam consectetur debitis labore id quibusdam odio harum omnis, porro recusandae libero ducimus. Fugit ea doloribus in omnis!
-                                    Saepe in nostrum ipsam omnis iure ipsa modi delectus! Veniam esse ipsam libero similique nisi? Vel sunt voluptas repellendus fugit illo, dolorum, odit totam consequuntur nobis doloribus quisquam! Ea, necessitatibus!
-                                    Adipisci numquam omnis placeat quos ducimus ut temporibus libero voluptas quibusdam quaerat rem explicabo sed error ipsum qui nobis iure delectus, id deleniti eveniet, saepe ullam ab. Illo, necessitatibus fuga.
+                        Saepe in nostrum ipsam omnis iure ipsa modi delectus! Veniam esse ipsam libero similique nisi? Vel sunt voluptas repellendus fugit illo, dolorum, odit totam consequuntur nobis doloribus quisquam! Ea, necessitatibus!
+                        Adipisci numquam omnis placeat quos ducimus ut temporibus libero voluptas quibusdam quaerat rem explicabo sed error ipsum qui nobis iure delectus, id deleniti eveniet, saepe ullam ab. Illo, necessitatibus fuga.
                     </p>
                 </article>
-
+                
             </div>
-
+            
             <hr class="sep-article">
-
+            
             
             
             <section class="comments">
-
+                
                 <h3>Commentaires</h3>
-
+                
                 <form class="addComment">
                     <div>
-                    <input type="text" id="username" placeholder="Nom">
-                    <input type="email" id="email" placeholder="Email">
+                        <input type="text" id="username" placeholder="Nom">
+                        <input type="email" id="email" placeholder="Email">
                     </div>
-
+                    
                     <textarea name="comment" id="comment-text"></textarea>
-
+                    
                     <button class="submit">Ajouter un commentaire</button>
                 </form>
 
@@ -65,53 +67,49 @@
                     <p class="author"></i>nRayen</p>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum molestiae repudiandae perspiciatis iure nulla, numquam aliquid cumque voluptates reiciendis, voluptatibus ad tempore alias sequi rerum dolorem cum rem blanditiis?</p>
                 </article>
-
+                
                 <template id="comment-template">
                     <article class="comment">
-                    <p class="author">nRayen</p>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum molestiae repudiandae perspiciatis iure nulla, numquam aliquid cumque voluptates reiciendis, voluptatibus ad tempore alias sequi rerum dolorem cum rem blanditiis?</p>
-                </article>
+                        <p class="author">nRayen</p>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum molestiae repudiandae perspiciatis iure nulla, numquam aliquid cumque voluptates reiciendis, voluptatibus ad tempore alias sequi rerum dolorem cum rem blanditiis?</p>
+                    </article>
                 </template>
             </section>
-
-            <div class="spinner">
-
-            </div>
             
+            <div id="spinner"></div>
 
         </section>
-
+        
         <aside class="sidebar">
             <h3>Catégories</h3>
-                <ul>
-                    <li><a href="#" data-count="3">High-Tech</a></li>
-                    <li><a href="#" data-count="29">Concentré du Web</a></li>
-                    <li><a href="#" data-count="2">A propos</a></li>
-                    <li><a href="#" data-count="8">Astuces développeurs</a></li>
-                    <li><a href="#" data-count="15">Ressources</a></li>
-                    <li><a href="#" data-count="7">Bonnes pratiques</a></li>
-                </ul>
-
-                <hr>
-
+            <ul>
+                <li><a href="#" data-count="3">High-Tech</a></li>
+                <li><a href="#" data-count="29">Concentré du Web</a></li>
+                <li><a href="#" data-count="2">A propos</a></li>
+                <li><a href="#" data-count="8">Astuces développeurs</a></li>
+                <li><a href="#" data-count="15">Ressources</a></li>
+                <li><a href="#" data-count="7">Bonnes pratiques</a></li>
+            </ul>
+            
+            <hr>
+            
             <h3>Auteurs</h3>
-                <ul>
-                    <li><a href="#" data-count="49">nRayen</a></li>
-                    <li><a href="#" data-count="15">Furet Masqué</a></li>
-                </ul>
-
-
+            <ul>
+                <li><a href="#" data-count="49">nRayen</a></li>
+                <li><a href="#" data-count="15">Furet Masqué</a></li>
+            </ul>
+            
+            
         </aside>
     </main>
-
+    
     <footer>
-        <p>Copyright 2022 <br>
-        Créé par nRayen</p>
-
-    </footer>
-
-
-
-
-</body>
-</html>
+        <p>Copyright 2023 <br>
+            Créé par <a href="https://github.com/nRayen">nRayen</a></p>
+        </footer>
+        
+        
+        
+        
+    </body>
+    </html>
