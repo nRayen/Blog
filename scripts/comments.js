@@ -1,27 +1,24 @@
-//import mojs from '@mojs/core'
+let spinner = document.querySelector('#spinner')
+const url = spinner.getAttribute('data-endpoint')
+let fetchPage = 1
 
-// const spinner = new mojs.Shape({
-//     parent:           '#spinner',
-//     shape:            'circle',
-//     stroke:           '#FC46AD',
-//     strokeDasharray:  '125, 125',
-//     strokeDashoffset: {'0': '-125'},
-//     strokeWidth:      4,
-//     fill:             'none',
-//     left:             '50%',
-//     top:              '50%',
-//     rotate:            {'-90': '270'},
-//     radius:           20,
-//     isShowStart:      true,
-//     duration:         2000,
-//     easing:           'back.in',
-//   })
-//   .then({
-//     rotate:            {'-90': '270'},
-//     strokeDashoffset: {'-125': '-250'},
-//     duration:         3000,
-//     easing:           'cubic.out',
-//   });
-  
-// spinner.play();
+const spinnerObserver = new IntersectionObserver((entries) => {
+    for (let entry of entries) {
+        if (entry.isIntersecting) {
+            console.log(entry.target)
+            loadContent()
+        }
+    }
+})
 
+
+function loadContent() {
+    console.log( url + `${fetchPage}`)
+    fetchPage++
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    spinnerObserver.observe(spinner)
+})
+
+// https://jsonplaceholder.typicode.com/comments?_limit=10?&_page=2

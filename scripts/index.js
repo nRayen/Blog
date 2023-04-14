@@ -15,4 +15,3 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-// https://jsonplaceholder.typicode.com/comments?_limit=10?&_page=2
