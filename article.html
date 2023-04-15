@@ -63,17 +63,19 @@
                     <button class="submit">Ajouter un commentaire</button>
                 </form>
 
-                <article class="comment">
-                    <p class="author"></i>nRayen</p>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum molestiae repudiandae perspiciatis iure nulla, numquam aliquid cumque voluptates reiciendis, voluptatibus ad tempore alias sequi rerum dolorem cum rem blanditiis?</p>
-                </article>
-                
-                <template id="comment-template">
-                    <article class="comment">
-                        <p class="author">nRayen</p>
+                <ul class="comments-list">
+                    <li class="comment">
+                        <p class="author"></i>nRayen</p>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum molestiae repudiandae perspiciatis iure nulla, numquam aliquid cumque voluptates reiciendis, voluptatibus ad tempore alias sequi rerum dolorem cum rem blanditiis?</p>
-                    </article>
-                </template>
+                    </li>
+                    
+                    <template id="comment-template">
+                        <li class="comment">
+                            <p class="author">nRayen</p>
+                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum molestiae repudiandae perspiciatis iure nulla, numquam aliquid cumque voluptates reiciendis, voluptatibus ad tempore alias sequi rerum dolorem cum rem blanditiis?</p>
+                        </li>
+                    </template>
+                </ul>
             </section>
             
             <div id="spinner" data-endpoint="https://jsonplaceholder.typicode.com/comments?_limit=10?&_page="></div>
